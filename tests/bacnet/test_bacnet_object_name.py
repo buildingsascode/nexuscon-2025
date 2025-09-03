@@ -9,15 +9,9 @@ DISTECH_CONTROLLER_DEVICE_ID = 1000
 async def main():
     print("Setting up BAC0")
     bacnet = BAC0.lite(bbmdAddress=DISTECH_CONTROLLER, bbmdTTL=900)
-    bacnet.discover(
-        limits=(DISTECH_CONTROLLER_DEVICE_ID, DISTECH_CONTROLLER_DEVICE_ID),
-        global_broadcast=True,
-    )
-    present_value = await bacnet.read(
-        f"{DISTECH_CONTROLLER} analogValue {DISTECH_CONTROLLER_DEVICE_ID} objectList"
-    )
-    print(f"Present Value: {present_value}")
-
+    device = await BAC0.device(DISTECH_CONTROLLER, DISTECH_CONTROLLER_DEVICE_ID, bacnet)
+    points = device.points
+    point = points[0]
 
 if __name__ == "__main__":
     asyncio.run(main())
