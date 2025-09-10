@@ -1,6 +1,31 @@
-from typing import Annotated, Literal
+from enum import Enum
+from typing import Annotated, Literal, NamedTuple
 
-from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer
+from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer, field_validator
+
+
+class BACnetType(NamedTuple):
+    point_type: str
+    description: str
+    bac0_type: str
+
+
+class BACnetObjectType(BACnetType, Enum):
+    AO = "AO", "Analog Output", "analog-output"
+    AI = "AI", "Analog Input", "analog-input"
+    BO = "BO", "Binary Output", "binary-output"
+    BI = "BI", "Binary Input", "binary-input"
+    AVO = "AVO", "Analog Value Output", "analog-value"
+    AVI = "AVI", "Analog Value Input", "analog-value"
+    BVO = "BVO", "Binary Value Output", "binary-value"
+    BVI = "BVI", "Binary Value Input", "binary-value"
+
+    @classmethod
+    def from_bac0_type(cls, bac0_type: str) -> "BACnetObjectType":
+        for obj in cls:
+            if obj.bac0_type == bac0_type:
+                return obj
+        raise ValueError(f"Unknown point type: {bac0_type}", bac0_type)
 
 
 def _x_to_bool(input: str | bool | None) -> bool:
@@ -41,9 +66,7 @@ class PointTemplate(BaseModel):
     hardware_software: Literal["HARDWARE", "SOFTWARE"] = Field(
         ..., alias="HARDWARE/SOFTWARE"
     )
-    type: Literal["AO", "AI", "BO", "BI", "AVO", "AVI", "BVO", "BVI"] = Field(
-        ..., alias="POINT TYPE"
-    )
+    type: BACnetObjectType = Field(..., alias="POINT TYPE")
     value_type: Literal["Numeric", "Boolean"] = Field(..., alias="VALUE TYPE")
     units: Literal[
         "%",
@@ -64,3 +87,13 @@ class PointTemplate(BaseModel):
     alarm_priority: int | None = Field(..., alias="ALARM PRIORITY", ge=1, le=5)
     show_on_graphic: XToBool = Field(..., alias="SHOW ON GRAPHIC")
     tags: str = Field(..., alias="TAGS")
+
+    @field_validator("type", mode="before")
+    @classmethod
+    def parse_type(cls, v):
+        if isinstance(v, BACnetObjectType):
+            return v
+        try:
+            return BACnetObjectType[v]
+        except KeyError:
+            raise ValueError(f"Invalid BACnetObjectType: {v}")
