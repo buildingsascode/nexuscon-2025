@@ -15,7 +15,7 @@ async def main():
     print(device.points)
     for point in points:
         print(
-            f"Point: {point.properties.name=}, {point.tags=}, {point.units=}, {await point.value=}, {point.status=}, {point.properties.description=}, {point.properties.type=}"
+            f"Point: {point.properties.name=}, {point.properties.address}, {point.tags=}, {point.units=}, {await point.value=}, {point.status=}, {point.properties.description=}, {point.properties.type=}"
         )
 
 
