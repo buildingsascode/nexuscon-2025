@@ -1,17 +1,20 @@
-import asyncio
-
 import BAC0
+import pytest
+from BAC0.core.devices.Points import Point
 
-DISTECH_CONTROLLER = "10.1.1.78:47808"
-DISTECH_CONTROLLER_DEVICE_ID = 1000
+from distech.constants import DISTECH_CONTROLLER, DISTECH_CONTROLLER_DEVICE_ID
 
+EXPECTED_POINT_NAMES = {"LEDOutput", "LEDInputSwitchh"}
 
-async def main():
+point = Point(pointName="LEDOutput")
+
+@pytest.mark.asyncio
+async def test_point_names():
     print("Setting up BAC0")
     bacnet = BAC0.lite(bbmdAddress=DISTECH_CONTROLLER, bbmdTTL=900)
     device = await BAC0.device(DISTECH_CONTROLLER, DISTECH_CONTROLLER_DEVICE_ID, bacnet)
-    points = device.points
-    point = points[0]
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    points: list[Point] = device.points
+    for point in points:
+        assert (
+            point.properties.name in EXPECTED_POINT_NAMES
+        ), f"Unexpected point name: {point.properties.name}"
