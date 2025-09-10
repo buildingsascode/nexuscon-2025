@@ -1,3 +1,6 @@
-pytest
 bac0
 bacpypes3
+openpyxl
+pydantic
+pytest
+pytest-asyncio

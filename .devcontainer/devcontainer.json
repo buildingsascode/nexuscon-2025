@@ -14,6 +14,9 @@
         "vscode": {
             // Set *default* container specific settings.json values on container create.
             "settings": {
+                "terminal.integrated.env.linux": {
+                    "PYTHONPATH": "${workspaceFolder}/"
+                },
                 "python.analysis.diagnosticMode": "openFilesOnly",
                 "python.analysis.typeCheckingMode": "standard",
                 "[python]": {
