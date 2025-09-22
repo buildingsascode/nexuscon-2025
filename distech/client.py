@@ -1,7 +1,11 @@
+from typing import Sequence, Type, TypeVar
+
 import requests
 from requests.auth import HTTPBasicAuth
 
-from distech.models import Backup
+from distech.models.distech import DistechResource
+
+T = TypeVar("T", bound=DistechResource)
 
 
 class DistechClient:
@@ -28,16 +32,16 @@ class DistechClient:
     ) -> None:
         self.session.auth = HTTPBasicAuth(username, password)
 
-    def get_backups(self) -> list[Backup]:
+    def _get_resource(self, resource: Type[T]) -> Sequence[T]:
         response = self.session.get(
-            f"https://{self.base_url}/api/rest/v2/services/backup/backups",
+            resource.get_endpoint(),
             verify=self.verify_tls,
         )
 
         response.raise_for_status()
         raw_response = response.json()
         if isinstance(raw_response, dict):
-            response = [Backup.model_validate(item) for item in raw_response.values()]
+            response = [resource.model_validate(item) for item in raw_response.values()]
         else:
             raise ValueError("Unexpected response format")
 
