@@ -2,7 +2,8 @@ import datetime
 
 from pydantic import BaseModel, Field
 
-from distech.models import Package, Platform
+from distech.models.package import Package
+from distech.models.platform import Platform
 
 
 class Backup(BaseModel):
@@ -10,5 +11,5 @@ class Backup(BaseModel):
     size: int
     creation_time: datetime.datetime = Field(alias="creation-time")
     includes: list[str]
-    packages: dict[str, Package]
-    platform: Platform
+    packages: dict[str, "Package"]
+    platform: "Platform"

@@ -12,4 +12,4 @@ class Platform(BaseModel):
     vendor_name: str = Field(alias="vendor-name")
     units: str
     architecture: str
-    kernel_version: str
+    kernel_version: str = Field(alias="kernel-version")
