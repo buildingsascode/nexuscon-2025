@@ -2,8 +2,8 @@
 
 import os
 
-from distech.client import DistechClient
-from distech.models.backup import Backup
+from distech import DistechClient
+from distech.models import Backup
 
 
 def main():

@@ -34,7 +34,7 @@ class DistechClient:
 
     def _get_resource(self, resource: Type[T]) -> Sequence[T]:
         response = self.session.get(
-            resource.get_endpoint(),
+            f"https://{self.base_url}{resource.get_endpoint()}",
             verify=self.verify_tls,
         )
 
