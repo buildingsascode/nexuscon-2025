@@ -3,7 +3,6 @@
 import os
 
 from distech import DistechClient
-from distech.models import Backup
 
 
 def main():
@@ -14,8 +13,10 @@ def main():
         verify_certificate=False,
     )
 
-    backups = client._get_resource(Backup)
-    print(backups)
+    backups = client.get_backups()
+    print(f"Found {len(backups)} backups")
+    for backup in backups:
+        print(f"- {backup.key=} {backup.size=} backup.creation_time={backup.creation_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     # Run pytest verify controller is not working correctly
 
