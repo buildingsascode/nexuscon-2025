@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Sequence, Type, TypeVar
 
 import requests
@@ -40,29 +41,45 @@ class DistechClient:
             f"https://{self.base_url}{resource.get_endpoint()}",
             verify=self.verify_tls,
         )
-
         response.raise_for_status()
         raw_response = response.json()
         if isinstance(raw_response, dict):
             response = [resource.model_validate(item) for item in raw_response.values()]
         else:
             raise ValueError("Unexpected response format")
+        return response
 
+    def _get_resource(self, resource: Type[T]) -> T:
+        """Generic method to get a single resource from the Distech controller"""
+        response = self.session.get(
+            f"https://{self.base_url}{resource.get_endpoint()}",
+            verify=self.verify_tls,
+        )
+        response.raise_for_status()
+        raw_response = response.json()
+        if isinstance(raw_response, dict):
+            response = resource.model_validate(raw_response)
+        else:
+            raise ValueError("Unexpected response format")
         return response
 
     def get_backups(self) -> list[Backup]:
         """Get the list of backups from the Distech controller"""
         return self._get_resources(Backup)
 
-    def download_backup(self, id_: str) -> bytes:
+    def download_backup(
+        self,
+        key: str,
+        output_path: Path,
+    ) -> None:
         """Download a backup from the Distech controller"""
         response = self.session.get(
-            f"https://{self.base_url}/api/rest/v2/services/backup/backups/{id_}/download",
+            f"https://{self.base_url}/api/rest/v2/services/backup/store/{key}",
             verify=self.verify_tls,
         )
-
         response.raise_for_status()
-        return response.content
+        with open(output_path, "wb") as file:
+            file.write(response.content)
 
     def get_programs(self) -> Sequence[str]:
         """Get the list of programs from the Distech controller"""
@@ -70,12 +87,10 @@ class DistechClient:
             f"https://{self.base_url}/api/rest/v2/services/programs/programs/",
             verify=self.verify_tls,
         )
-
         response.raise_for_status()
         raw_response = response.json()
         if isinstance(raw_response, dict):
             programs = list(raw_response.keys())
         else:
             raise ValueError("Unexpected response format")
-
         return programs
