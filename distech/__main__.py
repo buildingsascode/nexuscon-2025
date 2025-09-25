@@ -16,13 +16,14 @@ def main():
     backups = client.get_backups()
     print(f"Found {len(backups)} backups")
     for backup in backups:
-        print(f"- {backup.key=} {backup.size=} backup.creation_time={backup.creation_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(
+            f"- {backup.key=} {backup.size=} backup.creation_time={backup.creation_time.strftime('%Y-%m-%d %H:%M:%S')}"
+        )
 
-    # Run pytest verify controller is not working correctly
-
-    # Restore correct version of controller program
-
-    # Run pytest again to verify it works
+    backup = client.download_backup("test backup")
+    if not client.is_valid_backup(backup):
+        raise ValueError("Unexpected backup content ")
+    
 
 
 if __name__ == "__main__":

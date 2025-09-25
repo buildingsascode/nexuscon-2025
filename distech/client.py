@@ -1,5 +1,6 @@
-from pathlib import Path
+import io
 from typing import Sequence, Type, TypeVar
+from zipfile import ZipFile
 
 import requests
 from requests.auth import HTTPBasicAuth
@@ -70,16 +71,14 @@ class DistechClient:
     def download_backup(
         self,
         key: str,
-        output_path: Path,
-    ) -> None:
+    ) -> ZipFile:
         """Download a backup from the Distech controller"""
         response = self.session.get(
             f"https://{self.base_url}/api/rest/v2/services/backup/store/{key}",
             verify=self.verify_tls,
         )
         response.raise_for_status()
-        with open(output_path, "wb") as file:
-            file.write(response.content)
+        return ZipFile(io.BytesIO(response.content))
 
     def get_programs(self) -> Sequence[str]:
         """Get the list of programs from the Distech controller"""
@@ -94,3 +93,18 @@ class DistechClient:
         else:
             raise ValueError("Unexpected response format")
         return programs
+
+    def is_valid_backup(
+        self,
+        zip_file: ZipFile,
+    ) -> bool:
+        """Checks a zip file to see if it is a valid Distech backup file"""
+        # TODO this function should be more robust
+        if not isinstance(zip_file, ZipFile):
+            raise ValueError("Expected a ZipFile instance")
+        REQUIRED_FILES = {
+            "META-INF/manifest.json",
+            "bundle-content/com.distech.dcaf.core.gfx/files/project/Project.gfx",
+        }
+        zip_contents = set(file.filename for file in zip_file.filelist)
+        return REQUIRED_FILES.issubset(zip_contents)
