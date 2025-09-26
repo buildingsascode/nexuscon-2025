@@ -21,9 +21,10 @@ def main():
         )
 
     backup = client.download_backup("test backup")
-    if not client.is_valid_backup(backup):
-        raise ValueError("Unexpected backup content ")
-    
+    gfx_xml = client.extract_gfx_file(backup)
+    with open(client.DEFAULT_GFX_FILE, "wb") as gfx_file:
+        gfx_file.write(gfx_xml)
+
 
 
 if __name__ == "__main__":

@@ -4,8 +4,9 @@ This repository contains examples that will demonstrate how open-source software
 
 ## Presentation
 
-1. Git
+1. [Git](./demos/git/git.md)
 2. Grasshopper
 3. Wireshark
 4. API
 5. Python + Pytest
+6. Scaling

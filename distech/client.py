@@ -1,5 +1,5 @@
 import io
-from typing import Sequence, Type, TypeVar
+from typing import Type, TypeVar
 from zipfile import ZipFile
 
 import requests
@@ -12,6 +12,7 @@ T = TypeVar("T", bound=DistechResource)
 
 
 class DistechClient:
+    DEFAULT_GFX_FILE: str = "Main.xml"
     base_url: str
     verify_tls: bool
 
@@ -80,20 +81,6 @@ class DistechClient:
         response.raise_for_status()
         return ZipFile(io.BytesIO(response.content))
 
-    def get_programs(self) -> Sequence[str]:
-        """Get the list of programs from the Distech controller"""
-        response = self.session.get(
-            f"https://{self.base_url}/api/rest/v2/services/programs/programs/",
-            verify=self.verify_tls,
-        )
-        response.raise_for_status()
-        raw_response = response.json()
-        if isinstance(raw_response, dict):
-            programs = list(raw_response.keys())
-        else:
-            raise ValueError("Unexpected response format")
-        return programs
-
     def is_valid_backup(
         self,
         zip_file: ZipFile,
@@ -108,3 +95,18 @@ class DistechClient:
         }
         zip_contents = set(file.filename for file in zip_file.filelist)
         return REQUIRED_FILES.issubset(zip_contents)
+
+    def extract_gfx_file(
+        self,
+        zip_file: ZipFile,
+    ) -> bytes:
+        """Extract the Project.gfx file from a Distech backup zip file"""
+        if not self.is_valid_backup(zip_file):
+            raise ValueError("Invalid Distech backup file")
+        gfx_bytes = zip_file.open(
+            "bundle-content/com.distech.dcaf.core.gfx/files/project/Project.gfx"
+        ).read()
+        gfx_zip = ZipFile(io.BytesIO(gfx_bytes))
+        gfx_xml = gfx_zip.open(self.DEFAULT_GFX_FILE).read()
+        gfx_zip.close()
+        return gfx_xml
