@@ -4,6 +4,7 @@ from typing import Type, TypeVar
 from zipfile import ZipFile
 
 import requests
+import urllib3
 from requests.auth import HTTPBasicAuth
 
 from distech.models import Backup
@@ -27,8 +28,9 @@ class DistechClient:
         self.base_url = base_url
         self.session = requests.sessions.Session()
         self.verify_tls = verify_certificate
-
         self._set_authentication_header(username, password)
+        if not self.verify_tls:
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     def _set_authentication_header(
         self,
