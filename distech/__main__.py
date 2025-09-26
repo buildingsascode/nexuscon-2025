@@ -21,10 +21,11 @@ def main():
         )
 
     backup = client.download_backup("test backup")
+    with open("test backup.zip", "wb") as backup_file:
+        backup_file.write(backup)
     gfx_xml = client.extract_gfx_file(backup)
     with open(client.DEFAULT_GFX_FILE, "wb") as gfx_file:
         gfx_file.write(gfx_xml)
-
 
 
 if __name__ == "__main__":

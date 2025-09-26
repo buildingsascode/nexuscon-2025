@@ -1,4 +1,5 @@
 import io
+import zipfile
 from typing import Type, TypeVar
 from zipfile import ZipFile
 
@@ -72,14 +73,14 @@ class DistechClient:
     def download_backup(
         self,
         key: str,
-    ) -> ZipFile:
+    ) -> bytes:
         """Download a backup from the Distech controller"""
         response = self.session.get(
             f"https://{self.base_url}/api/rest/v2/services/backup/store/{key}",
             verify=self.verify_tls,
         )
         response.raise_for_status()
-        return ZipFile(io.BytesIO(response.content))
+        return response.content
 
     def is_valid_backup(
         self,
@@ -98,10 +99,13 @@ class DistechClient:
 
     def extract_gfx_file(
         self,
-        zip_file: ZipFile,
+        backup: bytes,
     ) -> bytes:
         """Extract the Project.gfx file from a Distech backup zip file"""
-        if not self.is_valid_backup(zip_file):
+        if zipfile.is_zipfile(io.BytesIO(backup)) is False:
+            raise ValueError("Invalid zip file")
+        zip_file = ZipFile(io.BytesIO(backup))
+        if self.is_valid_backup(zip_file) is False:
             raise ValueError("Invalid Distech backup file")
         gfx_bytes = zip_file.open(
             "bundle-content/com.distech.dcaf.core.gfx/files/project/Project.gfx"
