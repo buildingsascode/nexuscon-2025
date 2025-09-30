@@ -22,7 +22,7 @@
     <Props id="268" ns="0" et="ProjectProperties">
       <Author>deplu</Author>
       <CreationDate>2025-09-08T16:59:30.0951271-04:00</CreationDate>
-      <LastModifDate>2025-09-09T09:11:35.8079031-04:00</LastModifDate>
+      <LastModifDate>2025-09-30T16:44:22.1417397-04:00</LastModifDate>
       <Name>nexuscon_2025</Name>
       <Description />
       <Version />
@@ -47,17 +47,17 @@
       <AMI>True</AMI>
       <TNV>False</TNV>
     </Docs>
-    <CustomEnums id="305" ns="1" et="EnumerationCollection">
+    <CustomEnums id="289" ns="1" et="EnumerationCollection">
       <Cnt>0</Cnt>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
     </CustomEnums>
-    <VariableManager id="306" ns="2" et="VariableManager">
+    <VariableManager id="290" ns="2" et="VariableManager">
       <Project ref="1" />
       <Name></Name>
     </VariableManager>
-    <BindingManager id="307" ns="3" et="ProjectBindingManager">
+    <BindingManager id="291" ns="3" et="ProjectBindingManager">
       <Project ref="1" />
       <BindingCount>0</BindingCount>
     </BindingManager>
@@ -1984,23 +1984,23 @@
     <Name>DeviceModelType</Name>
     <Value>10016C0005820418</Value>
   </CustomPropertyInfo>
-  <DrawingDocument id="273" ns="0" refs="9">
+  <DrawingDocument id="273" ns="0" refs="5">
     <Name>New Programming Sheet</Name>
     <Shps id="274" ns="11" et="ShapeCollection">
-      <Cnt>8</Cnt>
-      <Items t="Array" ns="11" et="Shape" dim="8">275,301,297,279,282,285,289,293</Items>
+      <Cnt>4</Cnt>
+      <Items t="Array" ns="11" et="Shape" dim="4">275,279,281,285</Items>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
     </Shps>
     <Prj ref="1" />
-    <CPS id="303" ns="0" et="CustomPropertyList">
+    <CPS id="287" ns="0" et="CustomPropertyList">
       <Cnt>0</Cnt>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
     </CPS>
-    <PageSetup id="304" ns="0" et="DrawingDocumentPageSetupInfo">
+    <PageSetup id="288" ns="0" et="DrawingDocumentPageSetupInfo">
       <PageSize t="Struct" ns="12" et="Size">
         <width>1100</width>
         <height>850</height>
@@ -2010,7 +2010,7 @@
       <PrintZoomValue>100</PrintZoomValue>
     </PageSetup>
   </DrawingDocument>
-  <IP2BacnetHardwareOutput id="275" ns="13" refs="3">
+  <IP2BacnetHardwareOutput id="275" ns="13" refs="2">
     <Name>LEDOutput</Name>
     <VER>1</VER>
     <Doc ref="273" />
@@ -2019,16 +2019,10 @@
       <Description>Test LED</Description>
       <Index>104|1|104</Index>
     </Props>
-    <IL id="277" ns="14" et="LinkCollection">
+    <IL />
+    <OL id="277" ns="14" et="LinkCollection">
       <Cnt>1</Cnt>
       <Items t="Array" ns="14" et="Link" dim="1">278</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </IL>
-    <OL id="299" ns="14" et="LinkCollection">
-      <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">300</Items>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
@@ -2038,110 +2032,43 @@
     <OPF>N="Output" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="98"|N="OutOfService" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Fault" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Reliability" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Reliability"|N="Priority" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Priority"|N="OverrideSwitch" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Controllers.OverrideSwitch"|N="OverridePotentiometer" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="5"|N="InAlarm" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="ElapsedActiveTime" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="73"|</OPF>
   </IP2BacnetHardwareOutput>
   <Link id="278" ns="14" refs="2">
-    <FB ref="279" />
+    <FB ref="275" />
     <FP>Output</FP>
     <FP_OUT>True</FP_OUT>
-    <TB ref="275" />
+    <TB ref="279" />
     <TP>Input</TP>
     <TP_IN>True</TP_IN>
   </Link>
-  <Switch id="279" ns="14" refs="6">
-    <Name>Switch</Name>
+  <Monitor id="279" ns="14" refs="2">
+    <Name>Monitor</Name>
     <VER>1</VER>
     <Doc ref="273" />
-    <Bds>504,276,660,348</Bds>
+    <Bds>936,216,1032,228</Bds>
     <Props />
     <IL id="280" ns="14" et="LinkCollection">
-      <Cnt>3</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="3">281,284,288</Items>
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">278</Items>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
     </IL>
-    <OL id="295" ns="14" et="LinkCollection">
-      <Cnt>2</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="2">278,296</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </OL>
-    <IPV>1|1|1|</IPV>
-    <OPV>1|</OPV>
-    <OPF>N="Output" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="98"|</OPF>
-  </Switch>
-  <Link id="281" ns="14" refs="2">
-    <FB ref="282" />
-    <FP>Output</FP>
-    <FP_OUT>True</FP_OUT>
-    <TB ref="279" />
-    <TP>Off</TP>
-    <TP_IN>True</TP_IN>
-  </Link>
-  <InternalConstantNumeric id="282" ns="14" refs="2">
-    <Name>Internal Constant</Name>
-    <VER>1</VER>
-    <Doc ref="273" />
-    <Bds>384,288,456,300</Bds>
-    <Props />
-    <IL />
-    <OL id="283" ns="14" et="LinkCollection">
-      <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">281</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </OL>
-    <IPV></IPV>
-    <OPV>1|</OPV>
-  </InternalConstantNumeric>
-  <Link id="284" ns="14" refs="2">
-    <FB ref="285" />
-    <FP>Output</FP>
-    <FP_OUT>True</FP_OUT>
-    <TB ref="279" />
-    <TP>On</TP>
-    <TP_IN>True</TP_IN>
-  </Link>
-  <InternalConstantNumeric id="285" ns="14" refs="2">
-    <Name>Internal Constant</Name>
-    <VER>1</VER>
-    <Doc ref="273" />
-    <Bds>384,276,456,288</Bds>
-    <Props id="286" ns="11" et="ShapePropertyBag">
-      <Value>100</Value>
-    </Props>
-    <IL />
-    <OL id="287" ns="14" et="LinkCollection">
-      <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">284</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </OL>
-    <IPV></IPV>
-    <OPV>1|</OPV>
-  </InternalConstantNumeric>
-  <Link id="288" ns="14" refs="2">
-    <FB ref="289" />
-    <FP>Output</FP>
-    <FP_OUT>True</FP_OUT>
-    <TB ref="279" />
-    <TP>Select</TP>
-    <TP_IN>True</TP_IN>
-  </Link>
-  <IP2BacnetHardwareInput id="289" ns="13" refs="3">
+    <OL />
+    <IPV>1|</IPV>
+    <OPV></OPV>
+  </Monitor>
+  <IP2BacnetHardwareInput id="281" ns="13" refs="2">
     <Name>LEDInputSwitch</Name>
     <VER>1</VER>
     <Doc ref="273" />
     <Bds>120,300,264,348</Bds>
-    <Props id="290" ns="11" et="ShapePropertyBag">
+    <Props id="282" ns="11" et="ShapePropertyBag">
       <Description>Physical switch to toggle on/off connected LED</Description>
       <Index>100|1|100</Index>
     </Props>
     <IL />
-    <OL id="291" ns="14" et="LinkCollection">
-      <Cnt>2</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="2">292,288</Items>
+    <OL id="283" ns="14" et="LinkCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">284</Items>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
@@ -2150,73 +2077,23 @@
     <OPV>Output=1|Number=0|Override=0|OutOfService=0|Fault=0|Reliability=0|InAlarm=0|ElapsedActiveTime=0|ChangeOfStateCount=0|</OPV>
     <OPF>N="Output" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Override" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="OutOfService" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Fault" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Reliability" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Reliability"|N="InAlarm" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="ElapsedActiveTime" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="73"|</OPF>
   </IP2BacnetHardwareInput>
-  <Link id="292" ns="14" refs="2">
-    <FB ref="289" />
+  <Link id="284" ns="14" refs="2">
+    <FB ref="281" />
     <FP>Output</FP>
     <FP_OUT>True</FP_OUT>
-    <TB ref="293" />
+    <TB ref="285" />
     <TP>Input</TP>
     <TP_IN>True</TP_IN>
   </Link>
-  <Monitor id="293" ns="14" refs="2">
+  <Monitor id="285" ns="14" refs="2">
     <Name>Monitor</Name>
     <VER>1</VER>
     <Doc ref="273" />
     <Bds>384,216,480,228</Bds>
     <Props />
-    <IL id="294" ns="14" et="LinkCollection">
+    <IL id="286" ns="14" et="LinkCollection">
       <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">292</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </IL>
-    <OL />
-    <IPV>1|</IPV>
-    <OPV></OPV>
-  </Monitor>
-  <Link id="296" ns="14" refs="2">
-    <FB ref="279" />
-    <FP>Output</FP>
-    <FP_OUT>True</FP_OUT>
-    <TB ref="297" />
-    <TP>Input</TP>
-    <TP_IN>True</TP_IN>
-  </Link>
-  <Monitor id="297" ns="14" refs="2">
-    <Name>Monitor</Name>
-    <VER>1</VER>
-    <Doc ref="273" />
-    <Bds>696,216,792,228</Bds>
-    <Props />
-    <IL id="298" ns="14" et="LinkCollection">
-      <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">296</Items>
-      <AN>False</AN>
-      <AMI>True</AMI>
-      <TNV>False</TNV>
-    </IL>
-    <OL />
-    <IPV>1|</IPV>
-    <OPV></OPV>
-  </Monitor>
-  <Link id="300" ns="14" refs="2">
-    <FB ref="275" />
-    <FP>Output</FP>
-    <FP_OUT>True</FP_OUT>
-    <TB ref="301" />
-    <TP>Input</TP>
-    <TP_IN>True</TP_IN>
-  </Link>
-  <Monitor id="301" ns="14" refs="2">
-    <Name>Monitor</Name>
-    <VER>1</VER>
-    <Doc ref="273" />
-    <Bds>936,216,1032,228</Bds>
-    <Props />
-    <IL id="302" ns="14" et="LinkCollection">
-      <Cnt>1</Cnt>
-      <Items t="Array" ns="14" et="Link" dim="1">300</Items>
+      <Items t="Array" ns="14" et="Link" dim="1">284</Items>
       <AN>False</AN>
       <AMI>True</AMI>
       <TNV>False</TNV>
