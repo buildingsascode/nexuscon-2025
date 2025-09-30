@@ -116,3 +116,13 @@ class DistechClient:
         gfx_xml = gfx_zip.open(self.DEFAULT_GFX_FILE).read()
         gfx_zip.close()
         return gfx_xml
+
+    def get_latest_backup(self) -> Backup:
+        backups = self.get_backups()
+        backup = max(backups, key=lambda b: b.creation_time)
+
+        return backup
+
+    def get_gfx_file(self, backup: bytes) -> bytes:
+        gfx_xml = self.extract_gfx_file(backup)
+        return gfx_xml

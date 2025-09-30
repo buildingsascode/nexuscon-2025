@@ -10,18 +10,6 @@ UNVERSIONED_FILES = Path("demos/as_builts/building_0001/space_001")
 VERSIONED_FILES = Path("demos/as_builts/building_0001/space_123")
 
 
-def get_latest_backup(client: DistechClient) -> Backup:
-    backups = client.get_backups()
-    backup = max(backups, key=lambda b: b.creation_time)
-
-    return backup
-
-
-def get_gfx_file(client: DistechClient, backup: bytes) -> bytes:
-    gfx_xml = client.extract_gfx_file(backup)
-    return gfx_xml
-
-
 def setup_client() -> DistechClient:
     return DistechClient(
         base_url=os.environ["DISTECH_DEVICE"],
@@ -43,7 +31,7 @@ def write_unversioned_files(
     )
     with open(backup_path, "wb") as backup_file:
         backup_file.write(backup)
-    gfx = get_gfx_file(client, backup)
+    gfx = client.get_gfx_file(backup)
     with open(Path(UNVERSIONED_FILES, client.DEFAULT_GFX_FILE), "wb") as gfx_file:
         gfx_file.write(gfx)
 
@@ -56,15 +44,20 @@ def write_versioned_files(
     backup_path = Path(VERSIONED_FILES, f"{client.base_url}.zip")
     with open(backup_path, "wb") as backup_file:
         backup_file.write(backup)
-    gfx = get_gfx_file(client, backup)
+    gfx = client.get_gfx_file(backup)
     with open(Path(VERSIONED_FILES, client.DEFAULT_GFX_FILE), "wb") as gfx_file:
         gfx_file.write(gfx)
 
 
 def main():
+    print("Setting up client")
     client = setup_client()
-    latest_backup = get_latest_backup(client)
+    print("Getting latest backup")
+    latest_backup = client.get_latest_backup()
+    print(f"Latest backup: {latest_backup.key} created at {latest_backup.creation_time}")
+    print("Downloading latest backup")
     backup = client.download_backup(latest_backup.key)
+    print("Writing files")
     write_unversioned_files(client, latest_backup, backup)
     write_versioned_files(client, backup)
 
