@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && sudo apt-get -y install --no-install-recommends iputils-ping telnet dnsutils netcat-traditional
+
 # Create env directory if it doesn't exist
 mkdir -p ./env
 

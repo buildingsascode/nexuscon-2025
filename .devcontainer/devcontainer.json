@@ -49,5 +49,6 @@
                 "ms-python.isort"
             ]
         }
-    }
+    },
+    "runArgs": ["--dns-search=local"]
 }
