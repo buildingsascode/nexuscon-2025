@@ -17,7 +17,7 @@
                 "terminal.integrated.env.linux": {
                     "PYTHONPATH": "${workspaceFolder}/"
                 },
-                "python.analysis.diagnosticMode": "openFilesOnly",
+                "python.analysis.diagnosticMode": "workspace",
                 "python.analysis.typeCheckingMode": "standard",
                 "[python]": {
                     "defaultInterpreterPath": "/usr/local/bin/python",
