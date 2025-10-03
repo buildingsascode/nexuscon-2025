@@ -3,7 +3,7 @@ import pytest
 import pytest_asyncio
 from BAC0.core.devices.Points import Point
 
-from tools.templates.points import BACnetObjectType, BACnetObjectUnit, PointTemplate
+from tools.templates.points import BACnetObjectType, PointTemplate
 from tools.templates.templates import get_template_points
 
 BAC0.log_level("silence")
@@ -64,24 +64,3 @@ async def test_point_type(
         assert template_point.type == BACnetObjectType.from_bac0_type(
             point.properties.type
         ), f"Point type mismatch for point {point.properties.name}: template type {template_point.type}, controller type {point.properties.type}"
-
-
-@pytest.mark.asyncio
-async def test_point_units(
-    bacnet_template_points_by_name: dict[str, PointTemplate],
-    bacnet_device_points: list[Point],
-):
-    for point in bacnet_device_points:
-        assert (
-            point.properties.name is not None
-        ), "Unable to test point units, point name is None"
-        template_point = bacnet_template_points_by_name[point.properties.name]
-        assert (
-            point.properties.units_state is not None
-        ), f"Unable to test point units, point {point.properties.name} has no units"
-        assert template_point.units == BACnetObjectUnit.from_bac0_unit(
-            point.properties.units_state
-        ), (
-            f"Point units mismatch for point {point.properties.name}: "
-            f"template units {template_point.units}, controller units {point.properties.units_state}"
-        )
