@@ -11,7 +11,6 @@ async def main():
     device = await BAC0.device(
         os.environ["DISTECH_DEVICE"], os.environ["BACNET_DEVICE_ID"], bacnet
     )
-    await asyncio.sleep(2)
     points: list[Points.Point] = device.points
     print(device.points)
     for point in points:
