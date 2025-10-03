@@ -1,32 +1,7 @@
-import BAC0
 import pytest
-import pytest_asyncio
 from BAC0.core.devices.Points import Point
 
 from tools.templates.points import BACnetObjectType, PointTemplate
-from tools.templates.templates import get_template_points
-
-BAC0.log_level("silence")
-
-
-@pytest.fixture(scope="module")
-def bacnet_template_points() -> list[PointTemplate]:
-    return get_template_points()
-
-
-@pytest.fixture(scope="module")
-def bacnet_template_points_by_name(
-    bacnet_template_points: list[PointTemplate],
-) -> dict[str, PointTemplate]:
-    return {point.name: point for point in bacnet_template_points}
-
-
-@pytest_asyncio.fixture(scope="module")
-async def bacnet_device_points(bbmd_ip, device_id) -> list[Point]:
-    bacnet = BAC0.lite(bbmdAddress=bbmd_ip, bbmdTTL=900)
-    device = await BAC0.device(bbmd_ip, device_id, bacnet)
-    points = device.points
-    return points
 
 
 @pytest.mark.asyncio
