@@ -1,22 +1,12 @@
 """This CLI will be used to manage a Distech controller"""
 
-import os
 from pathlib import Path
 
-from distech import DistechClient
+from distech import DistechClient, setup_client
 from distech.models.backup import Backup
 
 UNVERSIONED_FILES = Path("demos/as_builts/building_0001/space_001")
 VERSIONED_FILES = Path("demos/as_builts/building_0001/space_123")
-
-
-def setup_client() -> DistechClient:
-    return DistechClient(
-        base_url=os.environ["DISTECH_DEVICE"],
-        username=os.environ["DISTECH_USER"],
-        password=os.environ["DISTECH_PASS"],
-        verify_certificate=False,
-    )
 
 
 def write_unversioned_files(
@@ -54,7 +44,9 @@ def main():
     client = setup_client()
     print("Getting latest backup")
     latest_backup = client.get_latest_backup()
-    print(f"Latest backup: {latest_backup.key} created at {latest_backup.creation_time}")
+    print(
+        f"Latest backup: {latest_backup.key} created at {latest_backup.creation_time}"
+    )
     print("Downloading latest backup")
     backup = client.download_backup(latest_backup.key)
     print("Writing files")

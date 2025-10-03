@@ -1,4 +1,5 @@
 import io
+import os
 import zipfile
 from typing import Type, TypeVar
 from zipfile import ZipFile
@@ -7,7 +8,7 @@ import requests
 import urllib3
 from requests.auth import HTTPBasicAuth
 
-from distech.models import Backup
+from distech.models import Backup, Job
 from distech.models.distech import DistechResource
 
 T = TypeVar("T", bound=DistechResource)
@@ -64,6 +65,24 @@ class DistechClient:
         raw_response = response.json()
         if isinstance(raw_response, dict):
             response = resource.model_validate(raw_response)
+        else:
+            raise ValueError("Unexpected response format")
+        return response
+
+    def create_backup(self, name: str, option: str) -> Job:
+        """Create a new backup on the Distech controller"""
+        response = self.session.post(
+            f"https://{self.base_url}/api/rest/v2/services/backup/backups/create",
+            verify=self.verify_tls,
+            json={
+                "item": name,
+                "option": option,
+            },
+        )
+        response.raise_for_status()
+        raw_response = response.json()
+        if isinstance(raw_response, dict):
+            response = Job.model_validate(raw_response)
         else:
             raise ValueError("Unexpected response format")
         return response
@@ -126,3 +145,12 @@ class DistechClient:
     def get_gfx_file(self, backup: bytes) -> bytes:
         gfx_xml = self.extract_gfx_file(backup)
         return gfx_xml
+
+
+def setup_client() -> DistechClient:
+    return DistechClient(
+        base_url=os.environ["DISTECH_DEVICE"],
+        username=os.environ["DISTECH_USER"],
+        password=os.environ["DISTECH_PASS"],
+        verify_certificate=False,
+    )
