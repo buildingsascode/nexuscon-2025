@@ -18,4 +18,6 @@ printf "\n# Source development environment variables\nsource ./env/dev.env\n" >>
 source ~/.bashrc
 
 # Install Python dependencies
-pip3 install --user -r requirements.txt
+pip install uv
+uv venv --clear
+uv pip install -r requirements.txt
