@@ -1,63 +1,9 @@
-from enum import Enum
-from typing import Annotated, Literal, NamedTuple
+from typing import Literal
 
-from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer, field_validator
+from pydantic import BaseModel, Field, field_validator
 
-
-class BACnetType(NamedTuple):
-    point_type: str
-    description: str
-    bac0_type: str
-
-
-class BACnetObjectType(BACnetType, Enum):
-    AO = "AO", "Analog Output", "analog-output"
-    AI = "AI", "Analog Input", "analog-input"
-    BO = "BO", "Binary Output", "binary-output"
-    BI = "BI", "Binary Input", "binary-input"
-    AVO = "AVO", "Analog Value Output", "analog-value"
-    AVI = "AVI", "Analog Value Input", "analog-value"
-    BVO = "BVO", "Binary Value Output", "binary-value"
-    BVI = "BVI", "Binary Value Input", "binary-value"
-
-    @classmethod
-    def from_bac0_type(cls, bac0_type: str) -> "BACnetObjectType":
-        for obj in cls:
-            if obj.bac0_type == bac0_type:
-                return obj
-        raise ValueError(f"Unknown point type: {bac0_type}", bac0_type)
-
-
-def _x_to_bool(input: str | bool | None) -> bool:
-    match input:
-        case bool():
-            return input
-        case "X":
-            return True
-        case "":
-            return False
-        case None:
-            return False
-        case _:
-            raise ValueError(f"Could not convert {input} to boolean", input)
-
-
-def bool_to_x(input: bool) -> str:
-    match input:
-        case True:
-            return "X"
-        case False:
-            return ""
-        case _:
-            raise ValueError(
-                f"Could not convert {input} to Yes No Picklist value", input
-            )
-
-
-XToBoolSerializer: PlainSerializer = PlainSerializer(bool_to_x, return_type=str)
-XToBoolValidator: BeforeValidator = BeforeValidator(_x_to_bool)
-XToBool = Annotated[bool, XToBoolSerializer, XToBoolValidator]
-__all__ = ["XToBool"]
+from tools.templates.bacnet_object_type import BACnetObjectType
+from tools.templates.serializers import XToBool
 
 
 class PointTemplate(BaseModel):
