@@ -1,7 +1,6 @@
 from enum import Enum
 from typing import Annotated, Literal, NamedTuple
 
-from bacpypes3.basetypes import EngineeringUnits
 from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer, field_validator
 
 
@@ -27,32 +26,6 @@ class BACnetObjectType(BACnetType, Enum):
             if obj.bac0_type == bac0_type:
                 return obj
         raise ValueError(f"Unknown point type: {bac0_type}", bac0_type)
-
-
-class BACnetUnit(NamedTuple):
-    unit: str
-    description: str
-    bac0_unit: int
-
-
-class BACnetObjectUnit(BACnetUnit, Enum):
-    PERCENT = "%", "Percent", EngineeringUnits.percent
-    DEG_F = "°F", "Degrees Fahrenheit", EngineeringUnits.degreesFahrenheit
-    AMPERE = "A", "Amperes", EngineeringUnits.amperes
-    BOOLEAN = "FALSE,TRUE", "Boolean", None
-    HERTZ = "Hz", "Hertz", EngineeringUnits.hertz
-    LB_H = "lb/h", "Pounds per hour", EngineeringUnits.poundsMassPerHour
-    NORMAL_FAULT = "NORMAL,FAULT", "Normal/Fault", EngineeringUnits.noUnits
-    OFF_ON = "OFF,ON", "Off/On", EngineeringUnits.noUnits
-    PSI = "psi", "Pounds per square inch", EngineeringUnits.poundsForcePerSquareInch
-    STOPPED_STARTED = "STOPPED,STARTED", "Stopped/Started", EngineeringUnits.noUnits
-
-    @classmethod
-    def from_bac0_unit(cls, bac0_unit: EngineeringUnits) -> "BACnetObjectUnit":
-        for unit in cls:
-            if unit.bac0_unit == bac0_unit:
-                return unit
-        raise ValueError(f"Unknown unit: {bac0_unit}", bac0_unit)
 
 
 def _x_to_bool(input: str | bool | None) -> bool:
@@ -95,7 +68,19 @@ class PointTemplate(BaseModel):
     )
     type: BACnetObjectType = Field(alias="POINT TYPE")
     value_type: Literal["Numeric", "Boolean"] = Field(alias="VALUE TYPE")
-    units: BACnetObjectUnit = Field(alias="UNITS")
+    units: Literal[
+        "%",
+        "°F",
+        "A",
+        "FALSE,TRUE",
+        "Hz",
+        "kBTU/h",
+        "lb/h",
+        "NORMAL,FAULT",
+        "OFF,ON",
+        "psi",
+        "STOPPED,STARTED",
+    ] = Field(alias="UNITS")
     trend: XToBool = Field(alias="TREND")
     cov_interval: str = Field(alias="COV/INTERVAL")
     alarm: XToBool = Field(alias="ALARM")
@@ -112,13 +97,3 @@ class PointTemplate(BaseModel):
             return BACnetObjectType[v]
         except KeyError:
             raise ValueError(f"Invalid BACnetObjectType: {v}")
-
-    @field_validator("units", mode="before")
-    @classmethod
-    def parse_units(cls, v):
-        if isinstance(v, BACnetObjectUnit):
-            return v
-        try:
-            return BACnetObjectUnit[v]
-        except KeyError:
-            raise ValueError(f"Invalid BACnetObjectUnit: {v}")
