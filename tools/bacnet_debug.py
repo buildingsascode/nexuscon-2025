@@ -1,16 +1,17 @@
 import asyncio
+import os
 
 import BAC0
 from BAC0.core.devices import Points
 
-from distech.constants import DISTECH_CONTROLLER, DISTECH_CONTROLLER_DEVICE_ID
-
 
 async def main():
     print("Setting up BAC0")
-    bacnet = BAC0.lite(bbmdAddress=DISTECH_CONTROLLER, bbmdTTL=900)
-    device = await BAC0.device(DISTECH_CONTROLLER, DISTECH_CONTROLLER_DEVICE_ID, bacnet)
-    await asyncio.sleep(1)
+    bacnet = BAC0.lite(bbmdAddress=os.environ["BBMD_IP"], bbmdTTL=900)
+    device = await BAC0.device(
+        os.environ["DISTECH_DEVICE"], os.environ["BACNET_DEVICE_ID"], bacnet
+    )
+    await asyncio.sleep(2)
     points: list[Points.Point] = device.points
     print(device.points)
     for point in points:
