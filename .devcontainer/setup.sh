@@ -14,7 +14,7 @@ else
 fi
 
 # Add source command to .bashrc if not already present
-printf "\n# Source development environment variables\nsource ./env/dev.env\n" >> ~/.bashrc
+printf "\n# Source development environment variables\nsource /workspaces/nexuscon-2025/env/dev.env\n" >> ~/.bashrc
 source ~/.bashrc
 
 # Install Python dependencies
