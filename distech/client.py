@@ -28,9 +28,9 @@ class DistechClient:
     ):
         self.base_url = base_url
         self.session = requests.sessions.Session()
-        self.verify_tls = verify_certificate
+        self.session.verify = verify_certificate
         self._set_authentication_header(username, password)
-        if not self.verify_tls:
+        if not verify_certificate:
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     def _set_authentication_header(
@@ -64,10 +64,7 @@ class DistechClient:
 
     def _get_resources(self, resource: Type[T]) -> list[T]:
         """Generic method to get a resource from the Distech controller"""
-        response = self.session.get(
-            f"https://{self.base_url}{resource.get_endpoint()}",
-            verify=self.verify_tls,
-        )
+        response = self.session.get(f"https://{self.base_url}{resource.get_endpoint()}")
         raw_response = self._process_response(response)
         records = [resource.model_validate(item) for item in raw_response.values()]
         return records
@@ -75,8 +72,7 @@ class DistechClient:
     def _get_resource(self, resource: Type[T], id_) -> T:
         """Generic method to get a single resource from the Distech controller"""
         response = self.session.get(
-            f"https://{self.base_url}{resource.get_endpoint()}{id_}",
-            verify=self.verify_tls,
+            f"https://{self.base_url}{resource.get_endpoint()}{id_}"
         )
         raw_response = self._process_response(response)
         records = resource.model_validate(raw_response)
@@ -86,7 +82,6 @@ class DistechClient:
         """Create a new backup on the Distech controller"""
         response = self.session.post(
             f"https://{self.base_url}/api/rest/v2/services/backup/backups/create",
-            verify=self.verify_tls,
             json={
                 "item": name,
                 "option": option,
@@ -103,7 +98,6 @@ class DistechClient:
         """Restore a backup on the Distech controller"""
         response = self.session.post(
             f"https://{self.base_url}/api/rest/v2/services/backup/backups/restore",
-            verify=self.verify_tls,
             json={
                 "item": key,
                 "excludes": [],
@@ -123,7 +117,6 @@ class DistechClient:
         """Download a backup from the Distech controller"""
         response = self.session.get(
             f"https://{self.base_url}/api/rest/v2/services/backup/store/{key}",
-            verify=self.verify_tls,
         )
         response.raise_for_status()
         return response.content
@@ -166,6 +159,18 @@ class DistechClient:
         backup = max(backups, key=lambda b: b.creation_time)
 
         return backup
+
+    def upload_backup(
+        self,
+        backup: str | os.PathLike,
+    ) -> None:
+        """Upload a backup to the Distech controller"""
+        response = self.session.post(
+            f"https://{self.base_url}/api/rest/v2/services/backup/store",
+            headers={"Content-Type": "application/zip"},
+            files={"file": (open(backup, "rb"))},
+        )
+        response.raise_for_status()
 
     def get_gfx_file(self, backup: bytes) -> bytes:
         gfx_xml = self.extract_gfx_file(backup)
