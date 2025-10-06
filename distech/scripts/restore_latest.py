@@ -6,8 +6,8 @@ from distech import setup_client
 def main():
     print("Setting up client")
     client = setup_client()
-    print("Backing up controller")
-    client.restore_backup("test backup")
+    print("Restoring backup")
+    client.restore_backup("latest")
 
 
 if __name__ == "__main__":
