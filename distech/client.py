@@ -8,7 +8,7 @@ import requests
 import urllib3
 from requests.auth import HTTPBasicAuth
 
-from distech.models import Backup, Job
+from distech.models import Backup, Job, Program
 from distech.models.distech import DistechResource
 
 T = TypeVar("T", bound=DistechResource)
@@ -72,10 +72,10 @@ class DistechClient:
         records = [resource.model_validate(item) for item in raw_response.values()]
         return records
 
-    def _get_resource(self, resource: Type[T]) -> T:
+    def _get_resource(self, resource: Type[T], id_) -> T:
         """Generic method to get a single resource from the Distech controller"""
         response = self.session.get(
-            f"https://{self.base_url}{resource.get_endpoint()}",
+            f"https://{self.base_url}{resource.get_endpoint()}{id_}",
             verify=self.verify_tls,
         )
         raw_response = self._process_response(response)
@@ -170,6 +170,14 @@ class DistechClient:
     def get_gfx_file(self, backup: bytes) -> bytes:
         gfx_xml = self.extract_gfx_file(backup)
         return gfx_xml
+
+    def list_programs(self) -> list[Program]:
+        """List all programs on the Distech controller"""
+        return self._get_resources(Program)
+
+    def list_program(self, program_id: str) -> Program:
+        """Get a specific program from the Distech controller"""
+        return self._get_resource(Program, program_id)
 
 
 def setup_client() -> DistechClient:
