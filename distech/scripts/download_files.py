@@ -25,7 +25,7 @@ def write_unversioned_files(
     with open(
         Path(
             UNVERSIONED_FILES,
-            f"{client.DEFAULT_GFX_FILE}_{latest_backup.creation_time.strftime('%Y%m%d_%H%M%S')}",
+            f"{latest_backup.creation_time.strftime('%Y%m%d_%H%M%S')}_{client.DEFAULT_GFX_FILE}",
         ),
         "wb",
     ) as gfx_file:
@@ -37,7 +37,7 @@ def write_versioned_files(
     backup: bytes,
 ) -> None:
     """Some organization use version control and want to keep a single file name, this function writes files with consistent names."""
-    backup_path = Path(VERSIONED_FILES, f"{client.base_url}.zip")
+    backup_path = Path(VERSIONED_FILES, "latest.zip")
     with open(backup_path, "wb") as backup_file:
         backup_file.write(backup)
     gfx = client.get_gfx_file(backup)

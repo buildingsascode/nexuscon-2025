@@ -10,7 +10,7 @@ def main():
     client = setup_client()
     print("Backing up controller")
     backup = client.create_backup(
-        f"Automated backup {datetime.datetime.now().isoformat()}", option="full"
+        "latest", option="full"
     )
     print(f"Backup job created: {backup.job}")
 
