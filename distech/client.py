@@ -172,6 +172,16 @@ class DistechClient:
         )
         response.raise_for_status()
 
+    def delete_backup(
+        self,
+        key: str,
+    ) -> None:
+        """Delete a backup from the Distech controller"""
+        response = self.session.delete(
+            f"https://{self.base_url}/api/rest/v2/services/backup/backups/{key}",
+        )
+        response.raise_for_status()
+
     def get_gfx_file(self, backup: bytes) -> bytes:
         gfx_xml = self.extract_gfx_file(backup)
         return gfx_xml
