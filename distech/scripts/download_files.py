@@ -22,7 +22,13 @@ def write_unversioned_files(
     with open(backup_path, "wb") as backup_file:
         backup_file.write(backup)
     gfx = client.get_gfx_file(backup)
-    with open(Path(UNVERSIONED_FILES, client.DEFAULT_GFX_FILE), "wb") as gfx_file:
+    with open(
+        Path(
+            UNVERSIONED_FILES,
+            f"{client.DEFAULT_GFX_FILE}_{latest_backup.creation_time.strftime('%Y%m%d_%H%M%S')}",
+        ),
+        "wb",
+    ) as gfx_file:
         gfx_file.write(gfx)
 
 
