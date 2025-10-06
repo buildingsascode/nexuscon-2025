@@ -1,25 +1,3 @@
-# [
-#     {
-#         "key": "1",
-#         "last-error": "",
-#         "debug": {"active": False, "last-start-time": ""},
-#         "sent-by": {
-#             "computer-name": "NORAD",
-#             "rest-user": "",
-#             "computer-user": "deplu",
-#         },
-#         "upload-date": "2025-09-09T13:11:36.952Z",
-#         "project": {
-#             "identifier": "F82ACB21-387B-4AA2-A415-04D3855F806B",
-#             "name": "nexuscon_2025",
-#             "version": "",
-#         },
-#         "binary-hash": "336D926753F71EB750008DD0D48E1730319CF7BF6C097B537BACE18AC76C3767",
-#         "name": "MainProgram",
-#         "state": "Running",
-#     }
-# ]
-
 import datetime
 from typing import ClassVar, override
 
