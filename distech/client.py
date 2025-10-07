@@ -1,0 +1,205 @@
+import io
+import os
+import zipfile
+from typing import Any, Type, TypeVar
+from zipfile import ZipFile
+
+import requests
+import urllib3
+from requests.auth import HTTPBasicAuth
+
+from distech.models import Backup, Job, Program
+from distech.models.distech import DistechResource
+
+T = TypeVar("T", bound=DistechResource)
+
+
+class DistechClient:
+    DEFAULT_GFX_FILE: str = "Main.xml"
+    base_url: str
+    verify_tls: bool
+
+    def __init__(
+        self,
+        username: str,
+        password: str,
+        base_url: str,
+        verify_certificate: bool,
+    ):
+        self.base_url = base_url
+        self.session = requests.sessions.Session()
+        self.session.verify = verify_certificate
+        self._set_authentication_header(username, password)
+        if not verify_certificate:
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+    def _set_authentication_header(
+        self,
+        username: str,
+        password: str,
+    ) -> None:
+        """Set the authentication header for the session"""
+        self.session.auth = HTTPBasicAuth(username, password)
+
+    def _process_response(self, response: requests.Response) -> dict[str, Any]:
+        """Process the response from the Distech controller"""
+        if response.ok:
+            records = response.json()
+            if isinstance(records, dict):
+                return records
+            else:
+                raise ValueError("Unexpected response format")
+        elif (
+            response.ok == False
+            and response.headers.get("content-type") == "application/json"
+        ):
+            raise requests.exceptions.HTTPError(
+                f"{response.status_code} Error: {response.reason} for url: {response.url}",
+                response.json(),
+            )
+        else:
+            raise requests.exceptions.HTTPError(
+                f"{response.status_code} Error: {response.reason} for url: {response.url}"
+            )
+
+    def _get_resources(self, resource: Type[T]) -> list[T]:
+        """Generic method to get a resource from the Distech controller"""
+        response = self.session.get(f"https://{self.base_url}{resource.get_endpoint()}")
+        raw_response = self._process_response(response)
+        records = [resource.model_validate(item) for item in raw_response.values()]
+        return records
+
+    def _get_resource(self, resource: Type[T], id_) -> T:
+        """Generic method to get a single resource from the Distech controller"""
+        response = self.session.get(
+            f"https://{self.base_url}{resource.get_endpoint()}{id_}"
+        )
+        raw_response = self._process_response(response)
+        records = resource.model_validate(raw_response)
+        return records
+
+    def create_backup(self, name: str, option: str) -> Job:
+        """Create a new backup on the Distech controller"""
+        response = self.session.post(
+            f"https://{self.base_url}/api/rest/v2/services/backup/backups/create",
+            json={
+                "item": name,
+                "option": option,
+            },
+        )
+        raw_response = self._process_response(response)
+        response = Job.model_validate(raw_response)
+        return response
+
+    def restore_backup(
+        self,
+        key: str,
+    ) -> None:
+        """Restore a backup on the Distech controller"""
+        response = self.session.post(
+            f"https://{self.base_url}/api/rest/v2/services/backup/backups/restore",
+            json={
+                "item": key,
+                "excludes": [],
+                "remove": False,
+            },
+        )
+        response.raise_for_status()
+
+    def get_backups(self) -> list[Backup]:
+        """Get the list of backups from the Distech controller"""
+        return self._get_resources(Backup)
+
+    def download_backup(
+        self,
+        key: str,
+    ) -> bytes:
+        """Download a backup from the Distech controller"""
+        response = self.session.get(
+            f"https://{self.base_url}/api/rest/v2/services/backup/store/{key}",
+        )
+        response.raise_for_status()
+        return response.content
+
+    def _is_valid_backup(
+        self,
+        zip_file: ZipFile,
+    ) -> bool:
+        """Checks a zip file to see if it is a valid Distech backup file"""
+        # TODO this function should be more robust
+        if not isinstance(zip_file, ZipFile):
+            raise ValueError("Expected a ZipFile instance")
+        REQUIRED_FILES = {
+            "META-INF/manifest.json",
+            "bundle-content/com.distech.dcaf.core.gfx/files/project/Project.gfx",
+        }
+        zip_contents = set(file.filename for file in zip_file.filelist)
+        return REQUIRED_FILES.issubset(zip_contents)
+
+    def extract_gfx_file(
+        self,
+        backup: bytes,
+    ) -> bytes:
+        """Extract the Project.gfx file from a Distech backup zip file"""
+        if zipfile.is_zipfile(io.BytesIO(backup)) is False:
+            raise ValueError("Invalid zip file")
+        zip_file = ZipFile(io.BytesIO(backup))
+        if self._is_valid_backup(zip_file) is False:
+            raise ValueError("Invalid Distech backup file")
+        gfx_bytes = zip_file.open(
+            "bundle-content/com.distech.dcaf.core.gfx/files/project/Project.gfx"
+        ).read()
+        gfx_zip = ZipFile(io.BytesIO(gfx_bytes))
+        gfx_xml = gfx_zip.open(self.DEFAULT_GFX_FILE).read()
+        gfx_zip.close()
+        return gfx_xml
+
+    def get_latest_backup(self) -> Backup:
+        backups = self.get_backups()
+        backup = max(backups, key=lambda b: b.creation_time)
+
+        return backup
+
+    def upload_backup(
+        self,
+        backup: str | os.PathLike,
+    ) -> None:
+        """Upload a backup to the Distech controller"""
+        response = self.session.post(
+            f"https://{self.base_url}/api/rest/v2/services/backup/store",
+            headers={"Content-Type": "application/zip"},
+            files={"file": (open(backup, "rb"))},
+        )
+        response.raise_for_status()
+
+    def delete_backup(
+        self,
+        key: str,
+    ) -> None:
+        """Delete a backup from the Distech controller"""
+        response = self.session.delete(
+            f"https://{self.base_url}/api/rest/v2/services/backup/backups/{key}",
+        )
+        response.raise_for_status()
+
+    def get_gfx_file(self, backup: bytes) -> bytes:
+        gfx_xml = self.extract_gfx_file(backup)
+        return gfx_xml
+
+    def list_programs(self) -> list[Program]:
+        """List all programs on the Distech controller"""
+        return self._get_resources(Program)
+
+    def list_program(self, program_id: str) -> Program:
+        """Get a specific program from the Distech controller"""
+        return self._get_resource(Program, program_id)
+
+
+def setup_client() -> DistechClient:
+    """Setup the Distech client from environment variables"""
+    return DistechClient(
+        base_url=os.environ["DISTECH_DEVICE"],
+        username=os.environ["DISTECH_USER"],
+        password=os.environ["DISTECH_PASS"],
+        verify_certificate=False,
+    )

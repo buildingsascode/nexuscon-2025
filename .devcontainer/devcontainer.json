@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.13-bullseye",
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": ".devcontainer/setup.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "terminal.integrated.env.linux": {
+                    "PYTHONPATH": "${workspaceFolder}/"
+                },
+                "python.analysis.diagnosticMode": "workspace",
+                "python.analysis.typeCheckingMode": "standard",
+                "[python]": {
+                    "defaultInterpreterPath": "/usr/local/bin/python",
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "diffEditor.ignoreTrimWhitespace": false,
+                    "editor.formatOnType": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "always",
+                        "source.unusedImports":"always"
+                    },
+                    "testing.pytestArgs": [
+                        "-s","tests"
+                    ],
+                    "testing.unittestEnabled": false,
+                    "testing.pytestEnabled": true,
+                    "python.analysis.diagnosticMode": "workspace"
+                },
+                "isort.args": [
+                    "--profile",
+                    "black"
+                ]
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "rdfox.rdfox-rdf"
+            ]
+        }
+    },
+    "runArgs": ["--dns-search=local"]
+}

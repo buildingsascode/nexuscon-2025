@@ -1,0 +1,2105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Namespaces>
+    <Namespace0 index="0" value="Distech.Gpl.Model" asm="DC.Gpl.Model" />
+    <Namespace1 index="1" value="Distech.Gpl.Model.CustomEnumerations" asm="DC.Gpl.Model" />
+    <Namespace2 index="2" value="Distech.Gpl.Model.Configuration.Variables" asm="DC.Gpl.Model" />
+    <Namespace3 index="3" value="Distech.Gpl.Model.Configuration.Bindings" asm="DC.Gpl.Model" />
+    <Namespace4 index="4" value="Distech.Gpl.Model.Configuration" asm="DC.Gpl.Model" />
+    <Namespace5 index="5" value="Distech.Gpl.Model.Configuration.IP2" asm="DC.Gpl.Model.IP2" />
+    <Namespace6 index="6" value="Distech.Gpl.Model.Configuration.IP" asm="DC.Gpl.Model.IP" />
+    <Namespace7 index="7" value="Distech.Shared.Properties" asm="DC.Shared.v1" />
+    <Namespace8 index="8" value="Distech.Shared.Identity" asm="DC.Shared.v1" />
+    <Namespace9 index="9" value="Distech.Gpl.Model.Configuration.IP2.SmartSense" asm="DC.Gpl.SmartSense.IP2" />
+    <Namespace10 index="10" value="Distech.Gpl.Model.Configuration.IP.SmartSense" asm="DC.Gpl.SmartSense" />
+    <Namespace11 index="11" value="Distech.Gpl.Model.Shapes" asm="DC.Gpl.Model" />
+    <Namespace12 index="12" value="System.Drawing" asm="System.Drawing" />
+    <Namespace13 index="13" value="Distech.Gpl.Model.Shapes.Blocks.IP2" asm="DC.Gpl.Model.IP2" />
+    <Namespace14 index="14" value="Distech.Gpl.Model.Shapes.Blocks" asm="DC.Gpl.Model" />
+  </Namespaces>
+  <Project id="1" ns="0" refs="4">
+    <ResourceManager ref="2" />
+    <Props id="268" ns="0" et="ProjectProperties">
+      <Author>deplu</Author>
+      <CreationDate>2025-09-08T16:59:30.0951271-04:00</CreationDate>
+      <LastModifDate>2025-09-30T16:44:22.1417397-04:00</LastModifDate>
+      <Name>nexuscon_2025</Name>
+      <Description />
+      <Version />
+      <ControllerType />
+      <MeasurementSystem>1</MeasurementSystem>
+      <Custom id="269" ns="0" et="CustomPropertyList">
+        <Cnt>2</Cnt>
+        <Items t="Array" ns="0" et="CustomPropertyInfo" dim="2">270,271</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </Custom>
+      <LastModifBy>deplu</LastModifBy>
+      <LastModifComputer>NORAD</LastModifComputer>
+      <ApplicationVersion>7.8.25205.1</ApplicationVersion>
+      <Identifier>F82ACB21-387B-4AA2-A415-04D3855F806B</Identifier>
+    </Props>
+    <Docs id="272" ns="0" et="DocumentCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="0" et="IDocument" dim="1">273</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Docs>
+    <CustomEnums id="289" ns="1" et="EnumerationCollection">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </CustomEnums>
+    <VariableManager id="290" ns="2" et="VariableManager">
+      <Project ref="1" />
+      <Name></Name>
+    </VariableManager>
+    <BindingManager id="291" ns="3" et="ProjectBindingManager">
+      <Project ref="1" />
+      <BindingCount>0</BindingCount>
+    </BindingManager>
+    <ModelVersion>2</ModelVersion>
+    <Password></Password>
+  </Project>
+  <ResourceManager id="2" ns="4" refs="2">
+    <Project ref="1" />
+    <UsedResources id="3" ns="4" et="ResourceUsageCollection">
+      <ResourceManager ref="2" />
+      <Cnt>22</Cnt>
+      <Items t="Array" ns="4" et="ResourceUsageInfo" dim="22">4,5,10,189,192,195,198,201,204,207,210,212,214,216,218,223,225,227,229,230,264,265</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </UsedResources>
+    <REL_COUNT>16</REL_COUNT>
+    <REL0>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:100/1</REL0>
+    <REL1>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:101/1</REL1>
+    <REL2>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:102/1</REL2>
+    <REL3>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:103/1</REL3>
+    <REL4>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:104/1</REL4>
+    <REL5>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:105/1</REL5>
+    <REL6>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:106/1</REL6>
+    <REL7>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareInputResource, DC.Gpl.Model.IP2:107/1</REL7>
+    <REL8>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:100/1</REL8>
+    <REL9>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:101/1</REL9>
+    <REL10>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:102/1</REL10>
+    <REL11>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:103/1</REL11>
+    <REL12>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:104/1</REL12>
+    <REL13>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:105/1</REL13>
+    <REL14>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:106/1</REL14>
+    <REL15>Distech.Gpl.Model.Configuration.IP2.IP2BacnetIOModuleResource, DC.Gpl.Model.IP2:0/Distech.Gpl.Model.Configuration.IP2.IP2BacnetHardwareOutputResource, DC.Gpl.Model.IP2:107/1</REL15>
+    <Favorites id="266" ns="4" et="FavoriteManager">
+      <Groups id="267" ns="4" et="FavoriteGroupCollection">
+        <Cnt>0</Cnt>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </Groups>
+    </Favorites>
+  </ResourceManager>
+  <IP2BacnetIOModuleResource id="4" ns="5">
+    <EN>True</EN>
+    <IDX>0</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <ModuleId>101</ModuleId>
+  </IP2BacnetIOModuleResource>
+  <IP2BacnetHardwareInputResource id="5" ns="5">
+    <EN>True</EN>
+    <IDX>100</IDX>
+    <TAG></TAG>
+    <AC>True</AC>
+    <NAME>LEDInputSwitch</NAME>
+    <DESC>Physical switch to toggle on/off connected LED</DESC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>3</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>350000</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>1</Maximum>
+    <Default>0</Default>
+    <LookupTable id="6" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+      <Entry1>x=350000, y=1</Entry1>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="7" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm id="8" ns="6" et="BacnetIPBInaryAlarm">
+      <Name></Name>
+      <Enabled>False</Enabled>
+      <AlarmInhibitBinaryValue>-1</AlarmInhibitBinaryValue>
+      <AlarmValue>False</AlarmValue>
+      <TimeDelay>0</TimeDelay>
+      <TimeDelayNormal>0</TimeDelayNormal>
+      <NotifyType>0</NotifyType>
+      <EventEnable id="9" ns="6" et="BacnetIPTransitionsProperty">
+        <Name></Name>
+        <ToOffNormal>True</ToOffNormal>
+        <ToFault>True</ToFault>
+        <ToNormal>True</ToNormal>
+      </EventEnable>
+      <ToOffNormalEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToOffNormalEventMessageTextConfig>
+      <ToFaultEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToFaultEventMessageTextConfig>
+      <ToNormalEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToNormalEventMessageTextConfig>
+      <NotificationClass>-1</NotificationClass>
+    </Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>1777C9E3-9078-4C12-86D7-0F3A231CA1C8</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BindingManagementResource id="10" ns="5">
+    <EN>True</EN>
+    <IDX>0</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <Bindings id="11" ns="5" et="BindingCollection">
+      <IdentityGenerator id="12" ns="8" et="IncrementalIdentityGenerator">
+        <_KeyPrefix>gfx-</_KeyPrefix>
+        <_KeySuffix />
+      </IdentityGenerator>
+      <Cnt>16</Cnt>
+      <Items t="Array" ns="5" et="Binding" dim="16">13,24,35,46,57,68,79,90,101,112,123,134,145,156,167,178</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+      <elem0_key>gfx-1</elem0_key>
+      <elem1_key>gfx-2</elem1_key>
+      <elem2_key>gfx-3</elem2_key>
+      <elem3_key>gfx-4</elem3_key>
+      <elem4_key>gfx-5</elem4_key>
+      <elem5_key>gfx-6</elem5_key>
+      <elem6_key>gfx-7</elem6_key>
+      <elem7_key>gfx-8</elem7_key>
+      <elem8_key>gfx-9</elem8_key>
+      <elem9_key>gfx-10</elem9_key>
+      <elem10_key>gfx-11</elem10_key>
+      <elem11_key>gfx-12</elem11_key>
+      <elem12_key>gfx-13</elem12_key>
+      <elem13_key>gfx-14</elem13_key>
+      <elem14_key>gfx-15</elem14_key>
+      <elem15_key>gfx-16</elem15_key>
+    </Bindings>
+  </IP2BindingManagementResource>
+  <ControlElementBinding id="13" ns="5">
+    <OwnerGuid>1777C9E3-9078-4C12-86D7-0F3A231CA1C8</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-1</Id>
+    <ElementA>/services/bacnet/local/objects/binary-inputs/101</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/1</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="14" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="15" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="16" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">17</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="18" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="19" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="20" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="21" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">22</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="23" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="17" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="22" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="24" ns="5">
+    <OwnerGuid>FD166531-893F-444E-AEC3-2183804C37B5</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-2</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/102</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/2</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="25" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="26" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="27" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">28</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="29" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="30" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="31" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="32" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">33</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="34" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="28" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="33" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="35" ns="5">
+    <OwnerGuid>23CE1876-946E-48F5-B37B-6FC629878461</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-3</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/103</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/3</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="36" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="37" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="38" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">39</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="40" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="41" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="42" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="43" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">44</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="45" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="39" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="44" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="46" ns="5">
+    <OwnerGuid>567DE953-3520-44F3-AD51-7142888697F5</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-4</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/104</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/4</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="47" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="48" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="49" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">50</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="51" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="52" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="53" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="54" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">55</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="56" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="50" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="55" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="57" ns="5">
+    <OwnerGuid>A02F4C9D-16E2-439D-9394-BBEB844EDC68</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-5</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/105</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/5</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="58" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="59" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="60" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">61</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="62" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="63" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="64" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="65" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">66</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="67" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="61" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="66" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="68" ns="5">
+    <OwnerGuid>53788079-D483-41A9-A258-7DF82EF0FDF2</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-6</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/106</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/6</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="69" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="70" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="71" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">72</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="73" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="74" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="75" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="76" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">77</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="78" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="72" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="77" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="79" ns="5">
+    <OwnerGuid>0115C0F8-6853-474D-936A-D35519E685B8</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-7</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/107</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/7</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="80" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="81" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="82" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">83</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="84" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="85" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="86" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="87" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">88</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="89" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="83" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="88" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="90" ns="5">
+    <OwnerGuid>9D643EAC-DA1E-4C60-ACC5-76FA9163983A</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-8</Id>
+    <ElementA>/services/bacnet/local/objects/analog-inputs/108</ElementA>
+    <ElementB>/services/hardware-io/modules/1/inputs/8</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="91" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="92" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="93" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">94</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="95" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="96" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="97" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="98" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">99</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="100" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>True</SyncValue>
+        <SyncPriorities>False</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="94" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="99" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="101" ns="5">
+    <OwnerGuid>2EEEBCB7-8ECC-4A64-86BC-B9483815F918</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-9</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/101</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/1</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="102" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="103" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="104" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">105</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="106" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="107" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="108" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="109" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">110</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="111" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="105" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="110" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="112" ns="5">
+    <OwnerGuid>97A5E2F5-B5A4-4E47-AE37-C58716D6D0D7</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-10</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/102</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/2</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="113" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="114" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="115" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">116</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="117" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="118" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="119" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="120" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">121</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="122" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="116" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="121" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="123" ns="5">
+    <OwnerGuid>0BD8F868-E42F-4A21-80B8-451BAB9ECBD1</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-11</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/103</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/3</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="124" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="125" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="126" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">127</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="128" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="129" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="130" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="131" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">132</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="133" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="127" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="132" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="134" ns="5">
+    <OwnerGuid>29B60612-D900-4C93-9BD4-2295C442D511</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-12</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/104</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/4</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="135" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="136" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="137" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">138</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="139" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="140" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="141" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="142" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">143</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="144" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="138" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="143" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="145" ns="5">
+    <OwnerGuid>D18E86F7-9330-43F1-AFEE-5FF52098017E</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-13</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/105</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/5</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="146" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="147" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="148" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">149</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="150" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="151" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="152" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="153" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">154</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="155" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="149" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="154" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="156" ns="5">
+    <OwnerGuid>5593C7E7-6D97-4E90-8F15-9D09FA450DD2</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-14</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/106</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/6</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="157" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="158" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="159" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">160</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="161" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="162" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="163" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="164" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">165</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="166" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="160" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="165" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="167" ns="5">
+    <OwnerGuid>F2DA1932-EA19-44F7-9F13-58E38D8AFC86</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-15</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/107</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/7</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="168" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="169" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="170" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">171</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="172" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="173" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="174" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="175" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">176</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="177" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="171" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="176" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <ControlElementBinding id="178" ns="5">
+    <OwnerGuid>7BF55E08-2CC5-4309-9C48-27DAB4603454</OwnerGuid>
+    <Name>BacnetHardwareIO</Name>
+    <Id>gfx-16</Id>
+    <ElementA>/services/bacnet/local/objects/analog-outputs/108</ElementA>
+    <ElementB>/services/hardware-io/modules/1/outputs/8</ElementB>
+    <InitDirection>0</InitDirection>
+    <SyncAToB id="179" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="180" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="181" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">182</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="183" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncAToB>
+    <SyncBToA id="184" ns="5" et="ControlElementSynchronization">
+      <Name></Name>
+      <Triggers id="185" ns="5" et="BindingSynchronizationTriggerCollection">
+        <IdentityGenerator id="186" ns="8" et="IncrementalIdentityGenerator">
+          <_KeyPrefix />
+          <_KeySuffix />
+        </IdentityGenerator>
+        <Cnt>1</Cnt>
+        <Items t="Array" ns="5" et="BindingSynchronizationTrigger" dim="1">187</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+        <elem0_key>1</elem0_key>
+      </Triggers>
+      <Options id="188" ns="5" et="ControlElementSynchronizationOptions">
+        <Name></Name>
+        <WritePriority>16</WritePriority>
+        <SyncValue>False</SyncValue>
+        <SyncPriorities>True</SyncPriorities>
+        <SyncOutOfService>True</SyncOutOfService>
+      </Options>
+    </SyncBToA>
+  </ControlElementBinding>
+  <BindingSynchronizationOnChangeTrigger id="182" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <BindingSynchronizationOnChangeTrigger id="187" ns="5">
+    <Name></Name>
+    <MinSyncTime>0</MinSyncTime>
+  </BindingSynchronizationOnChangeTrigger>
+  <IP2BacnetHardwareInputResource id="189" ns="5">
+    <EN>True</EN>
+    <IDX>101</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="190" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="191" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>FD166531-893F-444E-AEC3-2183804C37B5</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="192" ns="5">
+    <EN>True</EN>
+    <IDX>102</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="193" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="194" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>23CE1876-946E-48F5-B37B-6FC629878461</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="195" ns="5">
+    <EN>True</EN>
+    <IDX>103</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="196" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="197" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>567DE953-3520-44F3-AD51-7142888697F5</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="198" ns="5">
+    <EN>True</EN>
+    <IDX>104</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="199" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="200" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>A02F4C9D-16E2-439D-9394-BBEB844EDC68</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="201" ns="5">
+    <EN>True</EN>
+    <IDX>105</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="202" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="203" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>53788079-D483-41A9-A258-7DF82EF0FDF2</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="204" ns="5">
+    <EN>True</EN>
+    <IDX>106</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="205" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="206" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>0115C0F8-6853-474D-936A-D35519E685B8</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareInputResource id="207" ns="5">
+    <EN>True</EN>
+    <IDX>107</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <SignalInterpretation>0</SignalInterpretation>
+    <SignalType>0</SignalType>
+    <ReverseAction>False</ReverseAction>
+    <UseFilter>False</UseFilter>
+    <UseOverride>False</UseOverride>
+    <CheckOutOfRange>False</CheckOutOfRange>
+    <CheckSignalFault>False</CheckSignalFault>
+    <UseBezierInterpolation>False</UseBezierInterpolation>
+    <SignalOffset>0</SignalOffset>
+    <SignalLowLimit>0</SignalLowLimit>
+    <SignalHighLimit>0</SignalHighLimit>
+    <Offset>0</Offset>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <LookupTable id="208" ns="6" et="BacnetIPLookupTable">
+      <Entry0>x=0, y=0</Entry0>
+    </LookupTable>
+    <FastPulseActive>False</FastPulseActive>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <ThermistorType>4</ThermistorType>
+    <Tags id="209" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>9D643EAC-DA1E-4C60-ACC5-76FA9163983A</m_BindingOwnerGuid>
+  </IP2BacnetHardwareInputResource>
+  <IP2BacnetHardwareOutputResource id="210" ns="5">
+    <EN>True</EN>
+    <IDX>100</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>False</DuoUseTriac>
+    <Tags id="211" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>2EEEBCB7-8ECC-4A64-86BC-B9483815F918</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="212" ns="5">
+    <EN>True</EN>
+    <IDX>101</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="213" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>97A5E2F5-B5A4-4E47-AE37-C58716D6D0D7</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="214" ns="5">
+    <EN>True</EN>
+    <IDX>102</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="215" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>0BD8F868-E42F-4A21-80B8-451BAB9ECBD1</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="216" ns="5">
+    <EN>True</EN>
+    <IDX>103</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="217" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>29B60612-D900-4C93-9BD4-2295C442D511</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="218" ns="5">
+    <EN>True</EN>
+    <IDX>104</IDX>
+    <TAG></TAG>
+    <AC>True</AC>
+    <NAME>LEDOutput</NAME>
+    <DESC>Test LED</DESC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>98</ObjectUnit>
+    <SignalType>3</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>5</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="219" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm id="220" ns="6" et="BacnetIPAnalogAlarm">
+      <Name></Name>
+      <Enabled>False</Enabled>
+      <AlarmInhibitBinaryValue>-1</AlarmInhibitBinaryValue>
+      <LimitEnable id="221" ns="6" et="BacnetIPLimitsProperty">
+        <Name></Name>
+        <HighLimit>False</HighLimit>
+        <LowLimit>False</LowLimit>
+      </LimitEnable>
+      <HighLimit>0</HighLimit>
+      <LowLimit>0</LowLimit>
+      <DeadBand>0</DeadBand>
+      <TimeDelay>0</TimeDelay>
+      <TimeDelayNormal>0</TimeDelayNormal>
+      <NotifyType>0</NotifyType>
+      <EventEnable id="222" ns="6" et="BacnetIPTransitionsProperty">
+        <Name></Name>
+        <ToOffNormal>True</ToOffNormal>
+        <ToFault>True</ToFault>
+        <ToNormal>True</ToNormal>
+      </EventEnable>
+      <ToOffNormalEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToOffNormalEventMessageTextConfig>
+      <ToFaultEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToFaultEventMessageTextConfig>
+      <ToNormalEventMessageTextConfig>{D.ObjectName}\{ObjectName}\{N.ObjectName}\{EventState}</ToNormalEventMessageTextConfig>
+      <NotificationClass>-1</NotificationClass>
+    </Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>D18E86F7-9330-43F1-AFEE-5FF52098017E</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="223" ns="5">
+    <EN>True</EN>
+    <IDX>105</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="224" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>5593C7E7-6D97-4E90-8F15-9D09FA450DD2</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="225" ns="5">
+    <EN>True</EN>
+    <IDX>106</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="226" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>F2DA1932-EA19-44F7-9F13-58E38D8AFC86</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetHardwareOutputResource id="227" ns="5">
+    <EN>True</EN>
+    <IDX>107</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <PersistBinaryStats>False</PersistBinaryStats>
+    <BroadcastMode>0</BroadcastMode>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>5</CovIncrement>
+    <ObjectUnit>95</ObjectUnit>
+    <SignalType>0</SignalType>
+    <Minimum>0</Minimum>
+    <Maximum>0</Maximum>
+    <Default>0</Default>
+    <PwmPeriod>10</PwmPeriod>
+    <CoolDownTime>0</CoolDownTime>
+    <WarmUpTime>0</WarmUpTime>
+    <MinimumOnTime>0</MinimumOnTime>
+    <MinimumOffTime>0</MinimumOffTime>
+    <ReverseAction>False</ReverseAction>
+    <DuoUseTriac>True</DuoUseTriac>
+    <Tags id="228" ns="7" et="ObjectPropertyContainerCollection`1" gns="4" gt="TagComponent">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Tags>
+    <Alarm></Alarm>
+    <GenerateTrendLog>False</GenerateTrendLog>
+    <m_BindingOwnerGuid>7BF55E08-2CC5-4309-9C48-27DAB4603454</m_BindingOwnerGuid>
+  </IP2BacnetHardwareOutputResource>
+  <IP2BacnetNetworkPolicyResource id="229" ns="5">
+    <EN>True</EN>
+    <IDX>0</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <ReadMethod>1</ReadMethod>
+    <ConfirmedCov>False</ConfirmedCov>
+    <CovSubscriptionTime>21600</CovSubscriptionTime>
+    <MaxReceiveTime>600</MaxReceiveTime>
+    <PollInterval>60</PollInterval>
+    <CovMinSendTime>5</CovMinSendTime>
+    <CovPeriod>300</CovPeriod>
+    <CovIncrement>1</CovIncrement>
+  </IP2BacnetNetworkPolicyResource>
+  <IP2SmartSenseCommonResource id="230" ns="9" refs="6">
+    <EN>True</EN>
+    <IDX>0</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <CompilationLanguagesData>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Languages /&gt;</CompilationLanguagesData>
+    <CompilationEnumerationsData>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Enumerations /&gt;</CompilationEnumerationsData>
+    <CompilationValuesData>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Values /&gt;</CompilationValuesData>
+    <CompilationCustomImagesData>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;CustomImages /&gt;</CompilationCustomImagesData>
+    <SmartSenseEnumerationManager id="231" ns="9" et="IP2SmartSenseEnumerationManager">
+      <SmartSenseCommonResource ref="230" />
+      <NextEnumerationIndex>100</NextEnumerationIndex>
+      <SmartSenseEnumerations id="232" ns="7" et="ObjectPropertyContainerCollection`1" gns="10" gt="SmartSenseEnumeration">
+        <Cnt>10</Cnt>
+        <Items t="Array" ns="10" et="SmartSenseEnumeration" dim="10">233,234,235,236,237,238,239,240,241,242</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </SmartSenseEnumerations>
+    </SmartSenseEnumerationManager>
+    <SmartSenseValueManager id="243" ns="10" et="SmartSenseValueManager">
+      <SmartSenseCommonResource ref="230" />
+      <NextValueIndex>100</NextValueIndex>
+      <SmartSenseValues id="244" ns="7" et="ObjectPropertyContainerCollection`1" gns="10" gt="SmartSenseValue">
+        <Cnt>6</Cnt>
+        <Items t="Array" ns="10" et="SmartSenseValue" dim="6">245,247,249,251,254,256</Items>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </SmartSenseValues>
+    </SmartSenseValueManager>
+    <SmartSenseGroupDefinitionManager id="258" ns="10" et="SmartSenseGroupDefinitionManager">
+      <SmartSenseCommonResource ref="230" />
+      <SmartSenseGroupDefinitions id="259" ns="7" et="ObjectPropertyContainerCollection`1" gns="10" gt="SmartSenseGroupDefinition">
+        <Cnt>0</Cnt>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </SmartSenseGroupDefinitions>
+      <NextGroupIdsCount>0</NextGroupIdsCount>
+    </SmartSenseGroupDefinitionManager>
+    <SmartSenseCustomImageManager id="260" ns="10" et="SmartSenseCustomImageManager">
+      <SmartSenseCommonResource ref="230" />
+      <SmartSenseCustomImages id="261" ns="10" et="SmartSenseCustomImageCollection">
+        <Cnt>0</Cnt>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </SmartSenseCustomImages>
+    </SmartSenseCustomImageManager>
+    <SmartSenseCustomActionManager id="262" ns="10" et="SmartSenseCustomActionManager">
+      <SmartSenseCommonResource ref="230" />
+      <NextActionId>0</NextActionId>
+      <SmartSenseCustomActions id="263" ns="10" et="SmartSenseCustomActionCollection">
+        <Cnt>0</Cnt>
+        <AN>False</AN>
+        <AMI>True</AMI>
+        <TNV>False</TNV>
+      </SmartSenseCustomActions>
+    </SmartSenseCustomActionManager>
+    <m_BindingOwnerGuid>6E40314F-F0FA-4788-9852-79C607C0C618</m_BindingOwnerGuid>
+  </IP2SmartSenseCommonResource>
+  <SmartSenseEnumeration id="233" ns="10">
+    <IDX>0</IDX>
+    <KEY>GE:General.SmartSense.EcoVue</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="234" ns="10">
+    <IDX>1</IDX>
+    <KEY>GE:General.SmartSense.FanSpeed</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="235" ns="10">
+    <IDX>2</IDX>
+    <KEY>GE:General.SmartSense.FanSpeedOnOff</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="236" ns="10">
+    <IDX>3</IDX>
+    <KEY>GE:General.SmartSense.HeatingCooling</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="237" ns="10">
+    <IDX>4</IDX>
+    <KEY>GE:General.SmartSense.HvacMode</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="238" ns="10">
+    <IDX>5</IDX>
+    <KEY>GE:General.SmartSense.Motion</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="239" ns="10">
+    <IDX>6</IDX>
+    <KEY>GE:General.SmartSense.Occupancy</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="240" ns="10">
+    <IDX>7</IDX>
+    <KEY>GE:General.SmartSense.CustomActionStatus</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="241" ns="10">
+    <IDX>8</IDX>
+    <KEY>GE:General.SmartSense.RemoteControlStatus</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseEnumeration id="242" ns="10">
+    <IDX>9</IDX>
+    <KEY>GE:General.SmartSense.CO2Status</KEY>
+  </SmartSenseEnumeration>
+  <SmartSenseNumericValue id="245" ns="10">
+    <IDX>0</IDX>
+    <Name>Internal Space Temperature</Name>
+    <Category>2</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="246" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>0</ObjectInstance>
+    </DataSource>
+    <AccessType>1</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <UseRange>False</UseRange>
+    <Minimum>0</Minimum>
+    <Maximum>2147483647</Maximum>
+    <SupportNullValue>True</SupportNullValue>
+    <Unit>64</Unit>
+    <DefaultValue>NaN</DefaultValue>
+  </SmartSenseNumericValue>
+  <SmartSenseNumericValue id="247" ns="10">
+    <IDX>1</IDX>
+    <Name>Internal Relative Humidity</Name>
+    <Category>3</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="248" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>1</ObjectInstance>
+    </DataSource>
+    <AccessType>1</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <UseRange>False</UseRange>
+    <Minimum>0</Minimum>
+    <Maximum>2147483647</Maximum>
+    <SupportNullValue>True</SupportNullValue>
+    <Unit>98</Unit>
+    <DefaultValue>NaN</DefaultValue>
+  </SmartSenseNumericValue>
+  <SmartSenseNumericValue id="249" ns="10">
+    <IDX>2</IDX>
+    <Name>Internal CO2</Name>
+    <Category>4</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="250" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>2</ObjectInstance>
+    </DataSource>
+    <AccessType>1</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <UseRange>False</UseRange>
+    <Minimum>0</Minimum>
+    <Maximum>2147483647</Maximum>
+    <SupportNullValue>True</SupportNullValue>
+    <Unit>96</Unit>
+    <DefaultValue>NaN</DefaultValue>
+  </SmartSenseNumericValue>
+  <SmartSenseEnumerationValue id="251" ns="10">
+    <IDX>3</IDX>
+    <Name>Internal Motion</Name>
+    <Category>10</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="252" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>3</ObjectInstance>
+    </DataSource>
+    <AccessType>1</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <Enumeration id="253" ns="10" et="SmartSenseEnumerationHolder">
+      <EnumerationFullKey>GE:General.SmartSense.Motion</EnumerationFullKey>
+    </Enumeration>
+    <DefaultValue>0</DefaultValue>
+  </SmartSenseEnumerationValue>
+  <SmartSenseNumericValue id="254" ns="10">
+    <IDX>4</IDX>
+    <Name>Internal Illuminance</Name>
+    <Category>6</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="255" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>4</ObjectInstance>
+    </DataSource>
+    <AccessType>1</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <UseRange>False</UseRange>
+    <Minimum>0</Minimum>
+    <Maximum>2147483647</Maximum>
+    <SupportNullValue>True</SupportNullValue>
+    <Unit>37</Unit>
+    <DefaultValue>NaN</DefaultValue>
+  </SmartSenseNumericValue>
+  <SmartSenseNumericValue id="256" ns="10">
+    <IDX>8</IDX>
+    <Name>Internal Elevation</Name>
+    <Category>4</Category>
+    <DataSourceType>0</DataSourceType>
+    <DataSource id="257" ns="10" et="SmartSenseValueDataSourceInternal">
+      <ObjectInstance>8</ObjectInstance>
+    </DataSource>
+    <AccessType>2</AccessType>
+    <UpdateMode>1</UpdateMode>
+    <TimeoutEnabled>False</TimeoutEnabled>
+    <UseRange>True</UseRange>
+    <Minimum>0</Minimum>
+    <Maximum>2147483647</Maximum>
+    <SupportNullValue>False</SupportNullValue>
+    <Unit>33</Unit>
+    <DefaultValue>0</DefaultValue>
+  </SmartSenseNumericValue>
+  <IP2ControlNumericVariableResource id="264" ns="5">
+    <EN>True</EN>
+    <IDX>0</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <DESC>Manual input</DESC>
+    <FORMAT>T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="98"</FORMAT>
+    <ObjectUnit>98</ObjectUnit>
+    <Persist>True</Persist>
+  </IP2ControlNumericVariableResource>
+  <IP2ControlNumericVariableResource id="265" ns="5">
+    <EN>True</EN>
+    <IDX>1</IDX>
+    <TAG></TAG>
+    <AC>False</AC>
+    <ObjectUnit>95</ObjectUnit>
+    <Persist>False</Persist>
+  </IP2ControlNumericVariableResource>
+  <CustomPropertyInfo id="270" ns="0">
+    <Name>DeviceModelName</Name>
+    <Value>ECY-303-BI</Value>
+  </CustomPropertyInfo>
+  <CustomPropertyInfo id="271" ns="0">
+    <Name>DeviceModelType</Name>
+    <Value>10016C0005820418</Value>
+  </CustomPropertyInfo>
+  <DrawingDocument id="273" ns="0" refs="5">
+    <Name>New Programming Sheet</Name>
+    <Shps id="274" ns="11" et="ShapeCollection">
+      <Cnt>4</Cnt>
+      <Items t="Array" ns="11" et="Shape" dim="4">275,279,281,285</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </Shps>
+    <Prj ref="1" />
+    <CPS id="287" ns="0" et="CustomPropertyList">
+      <Cnt>0</Cnt>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </CPS>
+    <PageSetup id="288" ns="0" et="DrawingDocumentPageSetupInfo">
+      <PageSize t="Struct" ns="12" et="Size">
+        <width>1100</width>
+        <height>850</height>
+      </PageSize>
+      <PageSizeOption t="Enum" ns="0" et="PageSizeOptions">2</PageSizeOption>
+      <PrintZoomOption t="Enum" ns="0" et="PrintZoomOptions">1</PrintZoomOption>
+      <PrintZoomValue>100</PrintZoomValue>
+    </PageSetup>
+  </DrawingDocument>
+  <IP2BacnetHardwareOutput id="275" ns="13" refs="2">
+    <Name>LEDOutput</Name>
+    <VER>1</VER>
+    <Doc ref="273" />
+    <Bds>756,288,900,336</Bds>
+    <Props id="276" ns="11" et="ShapePropertyBag">
+      <Description>Test LED</Description>
+      <Index>104|1|104</Index>
+    </Props>
+    <IL />
+    <OL id="277" ns="14" et="LinkCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">278</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </OL>
+    <IPV>Input=1|Priority=0|AlarmHighLimit=0|AlarmLowLimit=0|AlarmDeadband=0|Feedback=0|TriggerBroadcast=0|TriggerTrendLog=0|ResetElapsedActiveTime=0|ResetChangeOfStateCount=0|AlarmInhibit=0|</IPV>
+    <OPV>Output=1|Number=0|OutOfService=0|Fault=0|Reliability=0|Priority=0|OverrideSwitch=0|OverridePotentiometer=0|EffectiveOutput=0|InAlarm=0|ElapsedActiveTime=0|ChangeOfStateCount=0|</OPV>
+    <OPF>N="Output" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="98"|N="OutOfService" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Fault" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Reliability" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Reliability"|N="Priority" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Priority"|N="OverrideSwitch" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Controllers.OverrideSwitch"|N="OverridePotentiometer" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="5"|N="InAlarm" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="ElapsedActiveTime" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="73"|</OPF>
+  </IP2BacnetHardwareOutput>
+  <Link id="278" ns="14" refs="2">
+    <FB ref="275" />
+    <FP>Output</FP>
+    <FP_OUT>True</FP_OUT>
+    <TB ref="279" />
+    <TP>Input</TP>
+    <TP_IN>True</TP_IN>
+  </Link>
+  <Monitor id="279" ns="14" refs="2">
+    <Name>Monitor</Name>
+    <VER>1</VER>
+    <Doc ref="273" />
+    <Bds>936,216,1032,228</Bds>
+    <Props />
+    <IL id="280" ns="14" et="LinkCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">278</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </IL>
+    <OL />
+    <IPV>1|</IPV>
+    <OPV></OPV>
+  </Monitor>
+  <IP2BacnetHardwareInput id="281" ns="13" refs="2">
+    <Name>LEDInputSwitch</Name>
+    <VER>1</VER>
+    <Doc ref="273" />
+    <Bds>120,300,264,348</Bds>
+    <Props id="282" ns="11" et="ShapePropertyBag">
+      <Description>Physical switch to toggle on/off connected LED</Description>
+      <Index>100|1|100</Index>
+    </Props>
+    <IL />
+    <OL id="283" ns="14" et="LinkCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">284</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </OL>
+    <IPV>ClrPulse=0|AlarmValue=0|AlarmHighLimit=0|AlarmLowLimit=0|AlarmDeadband=0|TriggerBroadcast=0|TriggerTrendLog=0|ResetElapsedActiveTime=0|ResetChangeOfStateCount=0|AlarmInhibit=0|</IPV>
+    <OPV>Output=1|Number=0|Override=0|OutOfService=0|Fault=0|Reliability=0|InAlarm=0|ElapsedActiveTime=0|ChangeOfStateCount=0|</OPV>
+    <OPF>N="Output" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Override" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="OutOfService" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Fault" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="Reliability" T="Distech.Gpl.Model.Shapes.Blocks.EnumFormat" F="GE:Bacnet.Standard.Reliability"|N="InAlarm" T="Distech.Gpl.Model.Shapes.Blocks.BooleanFormat" F="TRUE;FALSE"|N="ElapsedActiveTime" T="Distech.Gpl.Model.Shapes.Blocks.EngineeringUnitsFormat" F="73"|</OPF>
+  </IP2BacnetHardwareInput>
+  <Link id="284" ns="14" refs="2">
+    <FB ref="281" />
+    <FP>Output</FP>
+    <FP_OUT>True</FP_OUT>
+    <TB ref="285" />
+    <TP>Input</TP>
+    <TP_IN>True</TP_IN>
+  </Link>
+  <Monitor id="285" ns="14" refs="2">
+    <Name>Monitor</Name>
+    <VER>1</VER>
+    <Doc ref="273" />
+    <Bds>384,216,480,228</Bds>
+    <Props />
+    <IL id="286" ns="14" et="LinkCollection">
+      <Cnt>1</Cnt>
+      <Items t="Array" ns="14" et="Link" dim="1">284</Items>
+      <AN>False</AN>
+      <AMI>True</AMI>
+      <TNV>False</TNV>
+    </IL>
+    <OL />
+    <IPV>1|</IPV>
+    <OPV></OPV>
+  </Monitor>
+</Root>

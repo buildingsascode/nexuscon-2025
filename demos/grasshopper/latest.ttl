@@ -1,0 +1,25 @@
+@prefix ns1: <http://data.ashrae.org/bacnet/2020#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bacnet://1000> a ns1:Device ;
+    rdfs:label "bacnet://1000" ;
+    ns1:address "172.16.20.17" ;
+    ns1:device-instance 1000 ;
+    ns1:device-on-subnet <bacnet://subnet/172.16.20.0/24> ;
+    ns1:vendor-id <bacnet://vendor/10> .
+
+<bacnet://10> a ns1:Device ;
+    rdfs:label "bacnet://10" ;
+    ns1:address "192.168.2.1" ;
+    ns1:device-instance 1000 ;
+    ns1:device-on-subnet <bacnet://subnet/192.168.2.0/24> ;
+    ns1:vendor-id <bacnet://vendor/20> .
+
+<bacnet://network/3> a ns1:Network .
+
+<bacnet://network/315> a ns1:Network .
+
+<bacnet://subnet/172.16.20.0/24> a ns1:Subnet .
+
+<bacnet://subnet/192.168.2.0/24> a ns1:Subnet .

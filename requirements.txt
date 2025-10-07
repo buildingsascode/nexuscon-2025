@@ -1,0 +1,10 @@
+bac0==v2025.09.15
+bacpypes3==0.0.102
+openpyxl==3.1.5
+pydantic==2.11.9
+pytest==8.4.2
+pytest-asyncio==1.2.0
+requests==2.32.5
+rdflib==7.2.1
+
+git+https://github.com/ACE-IoT-Solutions/graph-hopper@main
